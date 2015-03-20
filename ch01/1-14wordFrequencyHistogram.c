@@ -15,18 +15,18 @@ int main()
             ++charArr[c];
         }
 
-        if (c == '\\') {
-            for (i = 0; i < 128; ++i) {
-                if (charArr[i] != 0) {
-                    putchar(i);
-                    for (j = 0; j < charArr[i]; ++j) {
-                        printf("|");
-                    }
-                    printf("\n");
+    }
+    // if (c == '\\') {
+        for (i = 0; i < 128; ++i) {
+            if (charArr[i] != 0) {
+                putchar(i);
+                for (j = 0; j < charArr[i]; ++j) {
+                    printf("|");
                 }
+                printf("\n");
             }
         }
-    }
+    // }
 
     return 0;
 }
