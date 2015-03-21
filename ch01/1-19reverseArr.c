@@ -5,26 +5,24 @@
 
 #define MAXCOLUMN 1000
 
-int splitEachLine(char line[], int maxcolumn);
+int getLenOfEachLine(char line[], int maxcolumn);
 void reverse(char line[], int len);
 
 int main() {
     int len;
     char line[MAXCOLUMN];
 
-    while( (len = splitEachLine(line, MAXCOLUMN)) != -1) {
+    while((len = getLenOfEachLine(line, MAXCOLUMN)) != -1) {
         if (len > 0) {
             reverse(line, len);
-            printf("%s\n", line);
-        } else {
-            printf("\n");
+            printf("%s", line);
         }
     }
 
     return 0;
 }
 
-int splitEachLine(char s[], int lim) {
+int getLenOfEachLine(char s[], int lim) {
     int i, c;
 
     for (i = 0; i < lim-1 && (c = getchar()) != '\n'; ++i) {
@@ -46,22 +44,15 @@ int splitEachLine(char s[], int lim) {
     return i;
 }
 
-void reverse(char line[], int len) {
-    int i;
+void reverse(char s[], int len) {
+    int i, l;
     char tmp;
 
-    if (line[len-2] == '\n') {
+    l = len - 2;
 
-    }
-
-    for (i = 0; i < (len-2)/2 + 1; ++i) {
-        tmp = line[len-i];
-        line[len - i] = line[i];
-        line[i] = tmp;
-
-        printf("%c, %d\n", line[i], line[i]);
-
-        printf("---------------------\n");
-
+    for (i = 0; i < l/2; ++i) {
+        tmp = s[l-i];
+        s[l - i] = s[i];
+        s[i] = tmp;
     }
 }
