@@ -1,0 +1,9 @@
+hello //remove "here"
+3 / 5
+printf("%d / %d\n", i, len);
+/* comment
+	goes
+	.... */
+
+my /* name */name is //null
+"aaaa ' bbbb ' cccc ";
