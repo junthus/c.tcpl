@@ -3,6 +3,5 @@
 
 int main()
 {
-	printf("%s\n", printb(18));
 	return 0;
 }
