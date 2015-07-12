@@ -1,1 +1,4 @@
 *.out
+*.o
+*.swap
+.DS_Store
