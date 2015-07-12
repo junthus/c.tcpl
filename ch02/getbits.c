@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "console.h"
 
+//x의 우측 p번재 부터 n개의 비트를 리턴
+
 unsigned getbits(unsigned x, int p, int n);
 
 int main()

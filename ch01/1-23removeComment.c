@@ -52,7 +52,7 @@ int main() {
         }
 
         if (state >= RESOLVED && c != '/') {
-            if (before == '/' && beforeState != BLOCK_COMMENT_OPENED) {
+            if (before == '/') {
                 printf("/");
             }
             putchar(c);
